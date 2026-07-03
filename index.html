@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Want a Best Buy Gift Card?</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+body{
+margin:0;
+font-family:'Inter',sans-serif;
+background:linear-gradient(to bottom,#fdfbfb,#f4ede8);
+overflow-x:hidden;
+color:#2d2b2a;
+position:relative;
+}
+
+/* Banner */
+.urgency-pulse{
+animation:pulseUrgency 1.5s infinite;
+font-size:1.1rem;
+background:#0046be; /* Best Buy Signature Blue */
+color:#ffffff;
+padding:0.6rem 0;
+text-align:center;
+font-weight:700;
+letter-spacing: 0.05em;
+text-transform: uppercase;
+}
+@keyframes pulseUrgency{0%,100%{opacity:1;}50%{opacity:0.85;}}
+
+/* Hero */
+.hero-headline{
+font-family:'Playfair Display',serif;
+font-weight:400;
+color:#0046be;
+margin-top:-0.5rem;
+}
+
+/* Steps */
+.step-box{
+background:linear-gradient(135deg,#ffffff,#fbf9f7);
+color:#2d2b2a;
+border-radius:1.5rem;
+padding:2rem 1.5rem;
+box-shadow:0 10px 30px rgba(0,70,190,0.05);
+text-align:center;
+transition:transform 0.3s ease,box-shadow 0.3s ease;
+position:relative;
+overflow:hidden;
+border:1px solid #eee9e6;
+}
+.step-box:hover{
+transform:translateY(-5px) scale(1.02);
+box-shadow:0 15px 35px rgba(0,70,190,0.1);
+}
+.step-box::after{
+content:"";
+position:absolute;
+top:-15px;
+right:-15px;
+width:35px;
+height:35px;
+background:rgba(255,240,0,0.2); /* Best Buy Yellow accent hint */
+border-radius:50%;
+}
+.step-box p{font-size:0.95rem; color:#5c5552;}
+
+/* Instruction text */
+.instructions-text{
+font-size:1.15rem;
+font-weight:600;
+margin-bottom:1.5rem;
+display:inline-block;
+padding:0.6rem 2rem;
+border-radius:2rem;
+background:#0046be; /* Best Buy Signature Blue */
+color:#ffffff;
+box-shadow:0 4px 15px rgba(0,70,190,0.15);
+letter-spacing:0.5px;
+}
+
+/* Button */
+.click-button{
+background:#fff200; /* Best Buy Vibrant Yellow */
+color:#0046be; /* Best Buy Signature Blue */
+font-weight:700;
+box-shadow:0 4px 20px rgba(255,242,0,0.4);
+font-size:1.5rem;
+padding:1rem 3.5rem;
+border-radius:2rem;
+transition:transform 0.3s,box-shadow 0.3s,background-color 0.3s;
+letter-spacing: 0.5px;
+}
+.click-button:hover{
+transform:scale(1.05);
+background:#e6da00;
+box-shadow:0 6px 25px rgba(255,242,0,0.6);
+}
+
+/* Cards */
+.card{
+border-radius:1.5rem;
+padding:2rem;
+box-shadow:0 10px 25px rgba(0,70,190,0.05);
+transition:transform 0.3s;
+background:white;
+color:#2d2b2a;
+border:1px solid #eee9e6;
+}
+.card:hover{transform:translateY(-3px);}
+
+/* Bubbles */
+#bubbles{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;}
+.bubble{
+position:absolute;
+border-radius:50%;
+background:rgba(0,70,190,0.15);
+opacity:0.4;
+animation:floatBubble linear infinite;
+}
+@keyframes floatBubble{
+0%{transform:translateY(0px) scale(0.5);opacity:0.4;}
+50%{opacity:0.6;}
+100%{transform:translateY(110vh) scale(1);opacity:0.1;}
+}
+</style>
+</head>
+
+<body>
+
+<div id="bubbles"></div>
+
+<div class="urgency-pulse">Kylie x Meta Sunglasses Launch 2026</div>
+
+<section class="relative py-16 px-4 text-center">
+
+<h1 class="text-5xl md:text-6xl mb-6 hero-headline">Want a Best Buy Gift Card?</h1>
+
+<p class="instructions-text">You must complete these steps to claim it towards the Kylie x Meta glasses:</p>
+
+<div class="grid md:grid-cols-4 gap-6 mb-6 max-w-6xl mx-auto">
+
+<div class="step-box">
+<p class="font-bold mb-1 text-[#0046be]">Step 1</p>
+<p>Click on “Claim Now”</p>
+</div>
+
+<div class="step-box">
+<p class="font-bold mb-1 text-[#0046be]">Step 2</p>
+<p>Enter your email and basic info</p>
+</div>
+
+<div class="step-box">
+<p class="font-bold mb-1 text-[#0046be]">Step 3</p>
+<p>Complete 4-5 sponsored deals (install apps or games)</p>
+</div>
+
+<div class="step-box">
+<p class="font-bold mb-1 text-[#0046be]">Step 4</p>
+<p>Enjoy your Best Buy gift card</p>
+</div>
+
+</div>
+
+<div class="mt-6">
+<a href="https://giftclick.org/aff_c?offer_id=3478&aff_id=64120" class="inline-block click-button">Claim Now</a>
+</div>
+
+<!-- Reward Estimator -->
+<div class="mt-12 card max-w-2xl mx-auto p-8 text-left">
+<label class="block font-bold mb-2 text-lg text-[#0046be]">Deals to complete (4-70):</label>
+<input type="number" id="stepsInput" min="4" max="70" class="w-full p-3 rounded-xl mb-4 text-black border border-stone-200 focus:outline-none focus:border-[#0046be]" placeholder="You must complete 4+ deals to claim it">
+<div class="text-center">
+<button onclick="calculateReward()" class="click-button px-6 py-3 text-lg rounded-xl w-full md:w-auto">Calculate Reward</button>
+</div>
+<p class="mt-4 font-bold text-xl text-center text-[#0046be]" id="rewardResult"></p>
+</div>
+
+<!-- FAQ -->
+<section class="py-12 px-4 text-center">
+<h2 class="text-3xl md:text-4xl font-bold mb-8 hero-headline">Frequently Asked Questions</h2>
+
+<div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto text-left">
+
+<div class="card faq-item cursor-pointer">
+<p class="font-bold mb-2 flex justify-between items-center text-[#0046be]">Is my information secure? <span class="text-stone-400 font-normal text-sm">▼</span></p>
+<p class="faq-content hidden text-stone-600 mt-2">All information is encrypted and stored securely. We never share your data.</p>
+</div>
+
+<div class="card faq-item cursor-pointer">
+<p class="font-bold mb-2 flex justify-between items-center text-[#0046be]">How do I claim my reward? <span class="text-stone-400 font-normal text-sm">▼</span></p>
+<p class="faq-content hidden text-stone-600 mt-2">Complete the steps shown above and finish the required deals.</p>
+</div>
+
+<div class="card faq-item cursor-pointer">
+<p class="font-bold mb-2 flex justify-between items-center text-[#0046be]">Can I apply from desktop? <span class="text-stone-400 font-normal text-sm">▼</span></p>
+<p class="faq-content hidden text-stone-600 mt-2">Desktop applications are not supported; please use mobile.</p>
+</div>
+
+<div class="card faq-item cursor-pointer">
+<p class="font-bold mb-2 flex justify-between items-center text-[#0046be]">Do I have to pay anything? <span class="text-stone-400 font-normal text-sm">▼</span></p>
+<p class="faq-content hidden text-stone-600 mt-2">No payment is required.</p>
+</div>
+
+<div class="card faq-item cursor-pointer">
+<p class="font-bold mb-2 flex justify-between items-center text-[#0046be]">When will I receive the gift card? <span class="text-stone-400 font-normal text-sm">▼</span></p>
+<p class="faq-content hidden text-stone-600 mt-2">After completing the required deals, your reward will be sent to your email.</p>
+</div>
+
+</div>
+</section>
+
+<script>
+document.querySelectorAll('.faq-item').forEach(item=>{
+item.addEventListener('click',()=>{
+item.querySelector('.faq-content').classList.toggle('hidden');
+});
+});
+
+function calculateReward(){
+const steps=parseInt(document.getElementById('stepsInput').value);
+if(steps<4){
+document.getElementById('rewardResult').textContent="You must complete 4+ deals to claim it";
+return;
+}
+const reward=Math.round((steps/4)*150);
+document.getElementById('rewardResult').textContent=`Estimated Reward: $${reward}`;
+}
+
+const bubblesContainer=document.getElementById('bubbles');
+function createBubble(topPosition=-50){
+const bubble=document.createElement('div');
+bubble.className='bubble';
+const size=Math.random()*25+15;
+bubble.style.width=size+'px';
+bubble.style.height=size+'px';
+bubble.style.left=Math.random()*100+'vw';
+bubble.style.top=topPosition+'px';
+bubble.style.animationDuration=(40+Math.random()*25)+'s';
+bubblesContainer.appendChild(bubble);
+bubble.addEventListener('animationend',()=>bubble.remove());
+}
+for(let i=0;i<25;i++){createBubble(Math.random()*window.innerHeight);}
+setInterval(()=>createBubble(),600);
+</script>
+
+</body>
+</html>
